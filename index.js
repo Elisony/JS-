@@ -1,9 +1,9 @@
 const nodemailer = require("nodemailer");
 // 发送邮件函数
 async function sendMail(text) {
-  var user = "1248647469@qq.com";//自己的邮箱
-  var pass = "fotzlbexvwcghjaf"; //qq邮箱授权码,如何获取授权码下面有讲
-  var to = "1664370870@qq.com";//对方的邮箱
+  var user = "xxxx@qq.com";//自己的邮箱
+  var pass = "xxx"; //qq邮箱授权码,如何获取授权码下面有讲
+  var to = "xxx@qq.com";//对方的邮箱
   let transporter = nodemailer.createTransport({
     host: "smtp.qq.com",
     port: 587,
@@ -37,7 +37,7 @@ function getHoneyedWords() {
 // })
 const schedule = require("node-schedule");
 //每天下午5点21分发送
-schedule.scheduleJob({ hour: 17, minute: 30 }, function () {
+schedule.scheduleJob({ hour: 17, minute: 21 }, function () {
   console.log("启动任务:" + new Date());
   getHoneyedWords().then((res) => {
     console.log(res.data);
